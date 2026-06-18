@@ -5,8 +5,6 @@ description: Use when a GitHub source needs a contained clone, local inspection,
 
 # Repo Lab Test
 
-Documentary mirror of the primary skill in `.codex/skills/repo-lab-test/SKILL.md`.
-
 Use only when a practical repository check can change the source decision.
 
 ## Scope rules

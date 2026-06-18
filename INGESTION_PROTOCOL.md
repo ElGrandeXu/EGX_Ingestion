@@ -15,7 +15,8 @@ Read:
 - `RISK_REGISTER.md`
 - relevant theme files, if any
 
-Use the active skills in `.agents/skills/` when the task matches them.
+Use the active skills in `.codex/skills/` when the task matches them. `.agents/skills/` is a compatibility mirror.
+Use `COMMUNICATION_PROTOCOL.md`: no visible checkpoints; write synthesis into files and keep the final user response compressed.
 
 ## 1. Identify the source
 
@@ -77,7 +78,7 @@ If clone/test is not justified, state why in the source note.
 
 If clone/test is justified:
 
-- use `.agents/skills/repo-lab-test`;
+- use `repo-lab-test`;
 - clone only into `repos/cloned/`;
 - read setup files and scripts before commands;
 - log external-repo commands in `logs/command-log.md`;
@@ -166,6 +167,8 @@ Update `CURRENT_STATE.md`, `NEXT_MISSION.md` and `HANDOFF.md` when:
 - the next user action changed;
 - a blocker exists.
 
+Do not narrate the handoff to the user. Write it into files.
+
 ## 11. Final per-source check
 
 Before moving to another source, verify:
@@ -177,3 +180,5 @@ Before moving to another source, verify:
 - theme impact is recorded;
 - decisions, candidates, risks and experiments are updated or explicitly not needed;
 - next action is clear.
+
+Final user response must use the ingestion format in `COMMUNICATION_PROTOCOL.md`.

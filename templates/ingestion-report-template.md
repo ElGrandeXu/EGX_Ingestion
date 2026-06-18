@@ -1,4 +1,6 @@
-# Ingestion Report
+# Ingestion File Report
+
+Internal report template. Keep complete in files. Do not paste this whole report to the user.
 
 ## Source processed
 
@@ -52,3 +54,18 @@
 - Next source:
 - Next action:
 - Blockers:
+
+## Final user response
+
+```text
+status:
+source:
+verdict:
+scores:
+theme:
+kept:
+rejected:
+tested:
+updated:
+next:
+```

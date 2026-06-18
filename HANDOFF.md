@@ -2,7 +2,7 @@
 
 ## Current state
 
-`EGX_Ingestion` has been consolidated and is ready for the first real source ingestion.
+`EGX_Ingestion` has been consolidated, published and updated with a final-only token-saving communication doctrine. It is ready for the first real source ingestion.
 
 No external source has been ingested. No external repository has been cloned. No dependencies have been installed.
 
@@ -27,15 +27,16 @@ GitHub CLI note:
 
 1. `AGENTS.md`
 2. `CURRENT_STATE.md`
-3. `NEXT_MISSION.md`
-4. `INGESTION_PROTOCOL.md`
-5. `SOURCE_INDEX.md`
-6. `THEME_MAP.md`
-7. `DECISIONS.md`
-8. `PRODUCTION_CANDIDATES.md`
-9. `RISK_REGISTER.md`
-10. `.agents/skills/README.md`
-11. `GIT_PUBLISH_AUDIT.md`
+3. `COMMUNICATION_PROTOCOL.md`
+4. `NEXT_MISSION.md`
+5. `INGESTION_PROTOCOL.md`
+6. `SOURCE_INDEX.md`
+7. `THEME_MAP.md`
+8. `DECISIONS.md`
+9. `PRODUCTION_CANDIDATES.md`
+10. `RISK_REGISTER.md`
+11. `.codex/skills/README.md`
+12. `GIT_PUBLISH_AUDIT.md`
 
 ## Essential rules
 
@@ -48,16 +49,20 @@ GitHub CLI note:
 - Do not create `EGX_Production`.
 - Do not commit future contents of `repos/cloned/`, `repos/archived/` or `experiments/runs/` except their `.gitkeep` files.
 - Keep `logs/*.md` versioned as controlled memory, but do not commit raw `*.log` files.
+- Use final-only communication by default. No progress narration.
 
 ## Active skills
 
-- `.agents/skills/source-ingestion`
-- `.agents/skills/repo-lab-test`
-- `.agents/skills/transversal-synthesis`
+- `.codex/skills/caveman-final-only`
+- `.codex/skills/source-ingestion`
+- `.codex/skills/repo-lab-test`
+- `.codex/skills/transversal-synthesis`
+
+Compatibility mirrors remain under `.agents/skills/`.
 
 ## Next action
 
-Wait for the first GitHub URL or URL list, then follow `INGESTION_PROTOCOL.md` source by source. Do not clone unless the source note justifies local inspection, and clone only into `repos/cloned/`.
+Wait for the first GitHub URL or URL list, then follow `INGESTION_PROTOCOL.md` source by source. Do not clone unless the source note justifies local inspection, and clone only into `repos/cloned/`. Final user reply must be compressed.
 
 ## Verification
 

@@ -2,6 +2,15 @@
 
 Operational procedures for `EGX_Ingestion`.
 
+## Communication default
+
+Use `COMMUNICATION_PROTOCOL.md`.
+
+- Work silently during execution.
+- Do not send progress checkpoints.
+- Write transversal synthesis into files, not into chat.
+- Final response is compressed to status, changed files, verification, decision and next action.
+
 ## Prepare an ingestion
 
 1. Read `AGENTS.md`, `CURRENT_STATE.md`, `INGESTION_PROTOCOL.md`, `SOURCE_INDEX.md`, `THEME_MAP.md`, `DECISIONS.md`, `PRODUCTION_CANDIDATES.md` and `RISK_REGISTER.md`.
@@ -91,7 +100,7 @@ After each source:
 6. Update `NEXT_MISSION.md`.
 7. Update `HANDOFF.md`.
 8. Run `.\scripts\check_workspace.ps1`.
-9. Summarize status, decisions, limits and next mission.
+9. Return only the compressed final response from `COMMUNICATION_PROTOCOL.md`.
 
 ## Verify workspace health
 

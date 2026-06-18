@@ -5,8 +5,6 @@ description: Use after each source ingestion to synchronize SOURCE_INDEX, THEME_
 
 # Transversal Synthesis
 
-Documentary mirror of the primary skill in `.codex/skills/transversal-synthesis/SKILL.md`.
-
 Use after every single source. Do not skip this step, including for rejected sources.
 
 ## Inputs

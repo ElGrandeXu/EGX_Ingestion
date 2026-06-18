@@ -5,7 +5,8 @@ Risk registry.
 | ID | Date | Type | Description | Source / theme | Severity 1-5 | Trigger | Mitigation | Status |
 |---|---|---|---|---|---:|---|---|---|
 | RISK-0001 | 2026-06-18 | Ingestion/production confusion | Risk of turning research notes into production architecture too early | Workspace | 3 | Production candidate proposed without score, proof or next test | Keep `EGX_Ingestion` separate from `EGX_Production`; require scoring, tests and decisions | Active |
-| RISK-0002 | 2026-06-18 | Skill divergence | `.agents/skills/` and `skills/` can diverge if future edits update only one copy | Workspace | 2 | Skill behavior changes in one location only | Treat `.agents/skills/` as active and `skills/` as documentary mirror | Active |
+| RISK-0002 | 2026-06-18 | Skill divergence | `.codex/skills/`, `.agents/skills/` and `skills/` can diverge if future edits update only one copy | Workspace | 3 | Skill behavior changes in one location only | Treat `.codex/skills/` as primary, `.agents/skills/` as compatibility mirror and `skills/` as documentary mirror; verify with `check_workspace.ps1` | Active |
+| RISK-0003 | 2026-06-18 | Communication compression | Final-only output could hide a real blocker or make a technical decision ambiguous | Workspace | 2 | Mission cannot proceed safely, exact error matters, or final compression drops critical context | Use blocker exception format and preserve exact paths, commands, errors and verdicts | Active |
 
 ## Types to watch
 

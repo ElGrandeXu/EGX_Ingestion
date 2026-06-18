@@ -2,6 +2,17 @@
 
 Date: 2026-06-18
 
+## 2026-06-18 Caveman doctrine patch
+
+Applied after the initial consolidation:
+
+- `COMMUNICATION_PROTOCOL.md` added as communication source of truth.
+- `TOKEN_SAVING_DOCTRINE.md` and `CAVEMAN_AUDIT.md` added.
+- `.codex/skills/` created as primary repo-scoped skill location.
+- `.agents/skills/` retained as compatibility mirror.
+- `caveman-final-only` skill added.
+- `scripts/check_workspace.ps1` extended to verify final-only doctrine and skill path decision.
+
 | Probleme identifie | Fichier concerne | Correction proposee | Raison | Risque | Statut |
 |---|---|---|---|---|---|
 | `AGENTS.md` est bon mais manque de consignes operationnelles par type de source et definition stricte de fin d'ingestion | `AGENTS.md` | Ajouter workflow par type, definition de done, role skills/templates, handoff | Eviter les resumes neutres et les oublis de registres | Faible, instructions plus precises | apply |

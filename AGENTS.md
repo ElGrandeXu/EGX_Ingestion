@@ -33,12 +33,25 @@ Core split:
 ## Active instruction surfaces
 
 - `AGENTS.md` is the durable repo instruction file.
-- `.agents/skills/` is the active Codex repo-skill location.
-- `skills/` is a human-readable documentary registry and reference mirror. If skill content diverges, `.agents/skills/` wins.
+- `COMMUNICATION_PROTOCOL.md` is the source of truth for user-visible communication.
+- `.codex/skills/` is the primary Codex repo-scoped skill location.
+- `.agents/skills/` is compatibility / historical mirror when needed.
+- `skills/` is a human-readable documentary registry and reference mirror. If skill content diverges, `.codex/skills/` wins.
 - `templates/` contains reusable templates for new notes and reports.
 - `sources/`, `themes/`, root registries and logs are the durable knowledge base.
 
 Do not add a new framework layer unless a later mission explicitly asks for it.
+
+## Communication / token-saving
+
+- Default mode: final-only.
+- Do not send progress updates during work.
+- Do not narrate reasoning or steps.
+- Work silently until done.
+- Speak only at final, or if blocked by auth/secret/destructive action/permission.
+- Use `COMMUNICATION_PROTOCOL.md` as source of truth.
+- Use `caveman-final-only` skill for all missions unless user explicitly asks for detailed narration.
+- Reasoning depth remains high; visible output remains low.
 
 ## Organization by themes
 
@@ -161,13 +174,4 @@ A source is done only when:
 
 ## End-of-mission response
 
-End each mission with:
-
-1. `status`: `done`, `partial` or `blocked`
-2. files created or modified
-3. directories created
-4. verification script executed or not
-5. check result
-6. structural decisions made
-7. risks or limits
-8. recommended next mission
+End each mission with the shortest format allowed by `COMMUNICATION_PROTOCOL.md`.

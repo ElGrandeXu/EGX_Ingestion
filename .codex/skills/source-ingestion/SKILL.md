@@ -5,8 +5,6 @@ description: Use when ingesting exactly one technical source and producing a dec
 
 # Source Ingestion
 
-Documentary mirror of the primary skill in `.codex/skills/source-ingestion/SKILL.md`.
-
 Use this skill for exactly one source at a time. Do not process another source until transversal synthesis is complete.
 
 ## Inputs

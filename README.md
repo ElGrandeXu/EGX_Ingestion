@@ -47,6 +47,7 @@ Do not move to the next source until the current source is complete.
 
 - Durable instructions: `AGENTS.md`
 - Procedure: `INGESTION_PROTOCOL.md`, `RUNBOOK.md`
+- Communication: `COMMUNICATION_PROTOCOL.md`, `TOKEN_SAVING_DOCTRINE.md`
 - Source notes: `sources/`
 - Themes: `themes/`
 - Source registry: `SOURCE_INDEX.md`
@@ -56,7 +57,8 @@ Do not move to the next source until the current source is complete.
 - Risks: `RISK_REGISTER.md`
 - Experiments: `EXPERIMENT_LOG.md`, `experiments/`
 - Commands: `logs/command-log.md`
-- Active skills: `.agents/skills/`
+- Primary Codex skills: `.codex/skills/`
+- Compatibility skill mirror: `.agents/skills/`
 - Documentary skill mirror: `skills/`
 
 ## Future EGX_Production

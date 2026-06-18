@@ -2,6 +2,16 @@
 
 Date: 2026-06-18
 
+## 2026-06-18 Caveman doctrine addendum
+
+- Communication doctrine now lives in `COMMUNICATION_PROTOCOL.md`.
+- Default visible communication is final-only.
+- `.codex/skills/` is now the primary repo-scoped Codex skill location.
+- `.agents/skills/` remains a compatibility mirror because docs and current discovery paths may differ.
+- `skills/` remains documentary only.
+
+Older references below to `.agents/skills/` as active are preserved as historical audit context and superseded by `CAVEMAN_AUDIT.md`.
+
 ## References consultees
 
 - Codex overview: https://developers.openai.com/codex

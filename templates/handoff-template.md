@@ -1,5 +1,7 @@
 # Handoff
 
+Internal handoff template. Keep details here; user final stays compressed.
+
 ## Current state
 
 - Last source processed:
@@ -35,3 +37,13 @@
 - Check command:
 - Check result:
 - Known limits:
+
+## Final user response
+
+```text
+status:
+changed:
+verified:
+decision:
+next:
+```

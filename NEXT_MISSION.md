@@ -6,6 +6,8 @@ Ingest the first GitHub repository source into `EGX_Ingestion`.
 
 The user can provide a single URL or a list of URLs. Codex must process the first unprocessed source completely before moving to the next.
 
+Use final-only communication. Do not send checkpoints. Write all detailed synthesis into workspace files.
+
 ## Prompt format for user
 
 ```md
@@ -27,7 +29,7 @@ https://github.com/owner/repo-b
 
 ## Procedure for Codex
 
-1. Read `AGENTS.md`, `CURRENT_STATE.md`, `INGESTION_PROTOCOL.md`, `SOURCE_INDEX.md`, `THEME_MAP.md`, `DECISIONS.md`, `PRODUCTION_CANDIDATES.md`, `RISK_REGISTER.md` and relevant skills in `.agents/skills/`.
+1. Read `AGENTS.md`, `COMMUNICATION_PROTOCOL.md`, `CURRENT_STATE.md`, `INGESTION_PROTOCOL.md`, `SOURCE_INDEX.md`, `THEME_MAP.md`, `DECISIONS.md`, `PRODUCTION_CANDIDATES.md`, `RISK_REGISTER.md` and relevant skills in `.codex/skills/`.
 2. Select the first unprocessed source only.
 3. Read the primary source and capture evidence.
 4. Decide whether clone/test is necessary.
@@ -38,6 +40,7 @@ https://github.com/owner/repo-b
 9. Update all transversal registries.
 10. Update `CURRENT_STATE.md`, `NEXT_MISSION.md` and `HANDOFF.md` if state changes.
 11. Run `.\scripts\check_workspace.ps1`.
+12. Respond only with the compressed ingestion final format.
 
 ## Non-negotiable rule
 
