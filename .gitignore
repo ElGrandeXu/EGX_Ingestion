@@ -1,0 +1,49 @@
+# secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*_token*
+*token*
+*secret*
+secrets/
+credentials/
+
+# dependencies
+node_modules/
+.pnpm-store/
+venv/
+.venv/
+**pycache**/
+**/__pycache__/
+*.pyc
+
+# builds / outputs
+dist/
+build/
+out/
+coverage/
+.cache/
+.tmp/
+temp/
+tmp/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# future external repos and heavy labs
+repos/cloned/*
+!repos/cloned/.gitkeep
+repos/archived/*
+!repos/archived/.gitkeep
+experiments/runs/*
+!experiments/runs/.gitkeep
+
+# logs that may become noisy
+*.log
