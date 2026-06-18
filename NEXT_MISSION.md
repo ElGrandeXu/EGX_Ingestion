@@ -2,9 +2,11 @@
 
 ## Recommended next mission
 
-Ingest the first GitHub repository source into `EGX_Ingestion`.
+Run the proposed `agent-minimalism` experiment or ingest the next single source.
 
 The user can provide a single URL or a list of URLs. Codex must process the first unprocessed source completely before moving to the next.
+
+Alternative experiment mission: choose one bounded implementation task and compare normal Codex behavior against an adapted minimal implementation ladder derived from Ponytail, measuring files changed, dependencies added, validation retained and checks retained.
 
 Use final-only communication. Do not send checkpoints. Write all detailed synthesis into workspace files.
 
@@ -48,4 +50,11 @@ Do not summarize a batch of repositories. Each repository must produce its own n
 
 ## Current blockers
 
-- None. The workspace is ready for the first real GitHub source.
+- None.
+
+## Last completed source
+
+- `github-dietrichgebert-ponytail`
+- Verdict: ADAPT
+- Theme: `agent-minimalism`
+- Clone retained locally under ignored path `repos/cloned/ponytail`

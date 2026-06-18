@@ -4,7 +4,9 @@ Date: 2026-06-18
 
 ## Workspace state
 
-Workspace consolidated from initial scaffolding into a usable Codex-native ingestion workspace. A final-only token-saving communication doctrine is now installed. No external source has been ingested. No external repository has been cloned. No dependency has been installed.
+Workspace consolidated from initial scaffolding into a usable Codex-native ingestion workspace. A final-only token-saving communication doctrine is installed. The first real source ingestion is complete: `github-dietrichgebert-ponytail`.
+
+An external repository was cloned inside the allowed ignored path: `repos/cloned/ponytail`. No dependency was installed.
 
 Git has been initialized locally on branch `main`. GitHub publication is complete: the private GitHub repository `ElGrandeXu/EGX_Ingestion` exists and `origin/main` tracks it.
 
@@ -33,11 +35,11 @@ Git has been initialized locally on branch `main`. GitHub publication is complet
 
 ## Current content status
 
-- Sources ingested: none.
-- Active themes: none.
-- Production candidates: none.
-- Experiments launched: none.
-- Known workspace risks: ingestion/production confusion, skill mirror divergence and OpenAI docs path transition between `.agents/skills/` and `.codex/skills/`.
+- Sources ingested: 1 (`github-dietrichgebert-ponytail`).
+- Active themes: `agent-minimalism`.
+- Production candidates: `PC-0001` adapted minimal implementation ladder, status `test-required`.
+- Experiments launched: `EXP-0001` done; `EXP-0002` proposed.
+- Known workspace risks: ingestion/production confusion, skill mirror divergence, communication compression, plugin sprawl, minimalism/neglect confusion, always-on rule cost and benchmark hype.
 - Git local repository: initialized on `main`.
 - GitHub remote: `origin` -> `https://github.com/ElGrandeXu/EGX_Ingestion.git`.
 - GitHub visibility: `PRIVATE`.
@@ -54,4 +56,4 @@ Git has been initialized locally on branch `main`. GitHub publication is complet
 
 ## Next step
 
-Ingest the first GitHub repository source-by-source from user-provided URLs. Use final-only responses and continue auditing staged files before each push.
+Either ingest the next single source or run `EXP-0002`, a bounded comparison of normal implementation vs adapted minimalism checklist before promoting `PC-0001`.

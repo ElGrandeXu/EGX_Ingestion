@@ -2,15 +2,23 @@
 
 ## Current state
 
-`EGX_Ingestion` has been consolidated, published and updated with a final-only token-saving communication doctrine. It is ready for the first real source ingestion.
+`EGX_Ingestion` has been consolidated, published and updated with a final-only token-saving communication doctrine. The first real source ingestion is complete.
 
-No external source has been ingested. No external repository has been cloned. No dependencies have been installed.
+Ingested source:
+
+- ID: `github-dietrichgebert-ponytail`
+- URL: https://github.com/DietrichGebert/ponytail
+- Verdict: ADAPT
+- Primary theme: `agent-minimalism`
+- Source note: `sources/github-dietrichgebert-ponytail.md`
+- Clone retained locally: `repos/cloned/ponytail` (ignored by git)
+- Dependencies installed: none
 
 Git has been initialized locally on branch `main`. The workspace has Git publication safeguards in `.gitignore`, `.gitattributes`, `SECURITY.md` and `GIT_PUBLISH_AUDIT.md`.
 
 GitHub publication is complete. The private repository is `ElGrandeXu/EGX_Ingestion` at `https://github.com/ElGrandeXu/EGX_Ingestion`.
 
-Last local commit:
+Previous published commit before Ponytail ingestion:
 
 - Message: `Initial EGX_Ingestion workspace`
 - Commit: `d074df0`
@@ -60,9 +68,15 @@ GitHub CLI note:
 
 Compatibility mirrors remain under `.agents/skills/`.
 
+## Current theme state
+
+- Active theme: `agent-minimalism`, maturity 2.
+- Production candidate: `PC-0001` adapted minimal implementation ladder, status `test-required`.
+- Experiments: `EXP-0001` done; `EXP-0002` proposed.
+
 ## Next action
 
-Wait for the first GitHub URL or URL list, then follow `INGESTION_PROTOCOL.md` source by source. Do not clone unless the source note justifies local inspection, and clone only into `repos/cloned/`. Final user reply must be compressed.
+Either run `EXP-0002` or wait for the next single source URL. Do not clone unless the source note justifies local inspection, and clone only into `repos/cloned/`. Final user reply must be compressed.
 
 ## Verification
 

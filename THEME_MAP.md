@@ -6,7 +6,7 @@ Living map of themes. Themes emerge from sources; they are not predefined by pla
 
 | Theme | Maturity 1-5 | Sources | Current decision question | EGX_Production implication | Notes |
 |---|---:|---|---|---|---|
-| _No active theme yet_ | - | - | - | - | - |
+| agent-minimalism | 2 | github-dietrichgebert-ponytail | Can agents reduce code/dependency/abstraction bloat without cutting safety or checks? | Candidate adapted ladder; test required before production doctrine | Distinct from communication/token saving; method useful, plugin installation rejected |
 
 ## Candidate themes
 
@@ -30,7 +30,9 @@ Living map of themes. Themes emerge from sources; they are not predefined by pla
 
 | Theme A | Relation | Theme B | Evidence | Impact |
 |---|---|---|---|---|
-| _None yet_ | - | - | - | - |
+| agent-minimalism | complements but is distinct from | token-saving / caveman-final-only | Ponytail governs implementation choices; Caveman governs user-visible communication | Keep code economy and speech economy separate in future doctrine |
+| agent-minimalism | supports | agent portability | Ponytail centralizes core skills and verifies host-specific copies | Future portable rules need drift checks before promotion |
+| agent-minimalism | supports | benchmark discipline | Ponytail documents corrected agentic benchmark claims after critique | Use reproducible agentic tests before adopting source claims |
 
 ## Maturity scale
 
