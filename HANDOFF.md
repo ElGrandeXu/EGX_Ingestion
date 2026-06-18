@@ -8,13 +8,20 @@ No external source has been ingested. No external repository has been cloned. No
 
 Git has been initialized locally on branch `main`. The workspace has Git publication safeguards in `.gitignore`, `.gitattributes`, `SECURITY.md` and `GIT_PUBLISH_AUDIT.md`.
 
-GitHub publication is pending because GitHub CLI (`gh`) is not installed or available in `PATH`.
+GitHub publication is complete. The private repository is `ElGrandeXu/EGX_Ingestion` at `https://github.com/ElGrandeXu/EGX_Ingestion`.
 
 Last local commit:
 
 - Message: `Initial EGX_Ingestion workspace`
-- Remote: not configured yet.
-- GitHub visibility target: PRIVATE first.
+- Commit: `d074df0`
+- Remote: `origin` -> `https://github.com/ElGrandeXu/EGX_Ingestion.git`.
+- GitHub visibility: `PRIVATE`.
+
+GitHub CLI note:
+
+- Installed executable: `C:\Program Files\GitHub CLI\gh.exe`.
+- The short `gh` command was not available in the current PowerShell `PATH` during publication.
+- GitHub authentication succeeded for `ElGrandeXu` with HTTPS.
 
 ## Files to read first
 
@@ -50,25 +57,7 @@ Last local commit:
 
 ## Next action
 
-Install GitHub CLI if publication is still needed:
-
-```powershell
-winget install --id GitHub.cli
-```
-
-Then restart the terminal, run browser authentication:
-
-```powershell
-gh auth login
-```
-
-After authentication, publish privately:
-
-```powershell
-gh repo create EGX_Ingestion --private --source=. --remote=origin --push
-```
-
-After the GitHub remote is configured and pushed, wait for the first GitHub URL or URL list, then follow `INGESTION_PROTOCOL.md`.
+Wait for the first GitHub URL or URL list, then follow `INGESTION_PROTOCOL.md` source by source. Do not clone unless the source note justifies local inspection, and clone only into `repos/cloned/`.
 
 ## Verification
 

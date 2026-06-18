@@ -5,7 +5,7 @@ Workspace: `C:\Users\maxer\Desktop\EGX_Ingestion`
 
 ## Objective
 
-Prepare `EGX_Ingestion` as a clean Git repository and publish it to GitHub as `EGX_Ingestion` when GitHub CLI browser authentication is available.
+Prepare `EGX_Ingestion` as a clean Git repository and publish it to GitHub as private repository `EGX_Ingestion`.
 
 ## Initial Git State
 
@@ -18,23 +18,12 @@ Prepare `EGX_Ingestion` as a clean Git repository and publish it to GitHub as `E
 
 ## GitHub CLI State
 
-- `gh --version`: unavailable.
-- `gh auth status`: unavailable.
-- Result: GitHub CLI is not installed or not available in `PATH`.
-- Browser authentication could not be started.
-- Practical Windows install command to run manually:
-
-```powershell
-winget install --id GitHub.cli
-```
-
-After installation, restart the terminal and run:
-
-```powershell
-gh auth login
-```
-
-Use GitHub.com and browser authentication. Do not paste tokens into the terminal.
+- `gh --version` by short command: unavailable in this PowerShell session because `gh` is not on `PATH`.
+- GitHub CLI executable found at: `C:\Program Files\GitHub CLI\gh.exe`.
+- `C:\Program Files\GitHub CLI\gh.exe --version`: `gh version 2.94.0 (2026-06-10)`.
+- `gh auth status` through the full executable path: authenticated to `github.com` as `ElGrandeXu`.
+- Git operations protocol: HTTPS.
+- Authentication result: successful; no manual token was requested.
 
 ## Workspace Audit
 
@@ -60,6 +49,13 @@ git status --short
 git diff --cached --name-status
 git commit -m "Initial EGX_Ingestion workspace"
 git remote -v
+git status
+C:\Program Files\GitHub CLI\gh.exe --version
+C:\Program Files\GitHub CLI\gh.exe auth status
+git status --short
+git status --ignored --short
+C:\Program Files\GitHub CLI\gh.exe repo create EGX_Ingestion --private --source=. --remote=origin --push
+C:\Program Files\GitHub CLI\gh.exe repo view EGX_Ingestion --json nameWithOwner,url,visibility,isPrivate,defaultBranchRef,pushedAt
 ```
 
 Sensitive-string search result:
@@ -159,7 +155,7 @@ Markdown logs in `logs/*.md` are intentionally not ignored.
 
 ## Risks Identified
 
-- GitHub publication is blocked until GitHub CLI is installed and authenticated.
+- The short `gh` command is not available in the current PowerShell `PATH`; use `C:\Program Files\GitHub CLI\gh.exe` or restart/update the shell environment before relying on `gh`.
 - Future ingestions may create cloned repositories under `repos/cloned/`; `.gitignore` protects them by default.
 - Future experiments may create bulky outputs under `experiments/runs/`; `.gitignore` protects them by default.
 - Future dependency folders and `.env` files are protected by `.gitignore`, but staged-file audits are still required before every push.
@@ -194,17 +190,19 @@ Reason: the workspace is a research and decision log that may later include note
 
 - Local Git repository: initialized.
 - Branch: `main`.
-- Git commit: created with message `Initial EGX_Ingestion workspace`.
-- GitHub repository creation: blocked until GitHub CLI is installed and authenticated.
-- Remote `origin`: not configured yet.
-- Working tree after commit: clean.
+- Initial Git commit: `d074df0 Initial EGX_Ingestion workspace`.
+- GitHub repository creation: completed.
+- GitHub repository: `ElGrandeXu/EGX_Ingestion`.
+- GitHub URL: `https://github.com/ElGrandeXu/EGX_Ingestion`.
+- GitHub visibility: `PRIVATE`.
+- Remote `origin`: `https://github.com/ElGrandeXu/EGX_Ingestion.git`.
+- Default branch: `main`.
+- Last pushed commit before documentation update: `d074df0 Initial EGX_Ingestion workspace`.
+- Remote push time reported by GitHub: `2026-06-18T15:16:46Z`.
+- Working tree after initial publication: clean.
 - Verification script: `.\scripts\check_workspace.ps1` returned `Status: OK`.
 - Tracked files under protected future-heavy areas:
   - `repos/cloned/.gitkeep`
   - `repos/archived/.gitkeep`
   - `experiments/runs/.gitkeep`
-- Recommended next command after installing and authenticating `gh`:
-
-```powershell
-gh repo create EGX_Ingestion --private --source=. --remote=origin --push
-```
+- Next action: commit and push this publication documentation, then begin the first source-by-source GitHub ingestion from a user-provided source.

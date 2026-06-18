@@ -6,7 +6,7 @@ Date: 2026-06-18
 
 Workspace consolidated from initial scaffolding into a usable Codex-native ingestion workspace. No external source has been ingested. No external repository has been cloned. No dependency has been installed.
 
-Git has been initialized locally on branch `main`. GitHub publication is not complete because GitHub CLI (`gh`) is not installed or available in `PATH`.
+Git has been initialized locally on branch `main`. GitHub publication is complete: the private GitHub repository `ElGrandeXu/EGX_Ingestion` exists and `origin/main` tracks it.
 
 ## Consolidation completed
 
@@ -36,22 +36,19 @@ Git has been initialized locally on branch `main`. GitHub publication is not com
 - Experiments launched: none.
 - Known workspace risks: ingestion/production confusion and skill mirror divergence.
 - Git local repository: initialized on `main`.
-- GitHub remote: not configured yet.
-- GitHub visibility target: PRIVATE first.
+- GitHub remote: `origin` -> `https://github.com/ElGrandeXu/EGX_Ingestion.git`.
+- GitHub visibility: `PRIVATE`.
 - Active Git protections: `.gitignore`, `.gitattributes`, `SECURITY.md` and `GIT_PUBLISH_AUDIT.md`.
 
 ## Git publication status
 
 - `git`: installed.
-- `gh`: not installed or not available in `PATH`.
-- GitHub authentication: not attempted because the required CLI is unavailable.
-- Local commit: created with message `Initial EGX_Ingestion workspace`.
-- Next GitHub command after installing and authenticating `gh`:
-
-```powershell
-gh repo create EGX_Ingestion --private --source=. --remote=origin --push
-```
+- `gh`: installed at `C:\Program Files\GitHub CLI\gh.exe`; the short `gh` command is not available in the current PowerShell `PATH`.
+- GitHub authentication: successful for `ElGrandeXu` using HTTPS.
+- GitHub repository: `https://github.com/ElGrandeXu/EGX_Ingestion`.
+- Local initial commit pushed: `d074df0 Initial EGX_Ingestion workspace`.
+- Documentation update pending or completed in a follow-up commit named `Document GitHub publication`.
 
 ## Next step
 
-Install and authenticate GitHub CLI, publish the existing local repository as private, then ingest the first GitHub repository source-by-source from user-provided URLs.
+Ingest the first GitHub repository source-by-source from user-provided URLs. Continue using the private repository and audit staged files before each push.
