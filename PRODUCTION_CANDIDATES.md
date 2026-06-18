@@ -4,7 +4,7 @@ Elements that could later migrate to `EGX_Production`.
 
 | ID | Pattern / element | Source | Theme | Status | Practical value evidence | Confidence 1-5 | Estimated effort | Risk | Next test |
 |---|---|---|---|---|---|---:|---|---|---|
-| PC-0001 | Adapted minimal implementation ladder | github-dietrichgebert-ponytail | agent-minimalism | test-required | Ponytail repo provides cross-agent rules, safety carve-outs, examples, benchmarks and passing local rule-copy/pi-extension tests | 4 | Low if used as checklist; medium if made a repo-scoped skill | Minimalism can become underbuilding; always-on context can conflict with task-specific requirements | EXP-0002: bounded implementation comparison before migration |
+| PC-0001 | Adapted minimal implementation ladder | github-dietrichgebert-ponytail; EXP-0002 | agent-minimalism | candidate | Ponytail repo provides cross-agent rules and safety carve-outs; EXP-0002 showed the adapted ladder avoided tickets/scripts/folders while improving next-action clarity | 4 | Low as checklist; medium if made repo-scoped skill | Minimalism can become underbuilding; always-on context can conflict with task-specific requirements | Test on one production-style implementation task before migration |
 
 ## Entry rules
 

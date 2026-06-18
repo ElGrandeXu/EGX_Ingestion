@@ -6,7 +6,7 @@ Living map of themes. Themes emerge from sources; they are not predefined by pla
 
 | Theme | Maturity 1-5 | Sources | Current decision question | EGX_Production implication | Notes |
 |---|---:|---|---|---|---|
-| agent-minimalism | 2 | github-dietrichgebert-ponytail | Can agents reduce code/dependency/abstraction bloat without cutting safety or checks? | Candidate adapted ladder; test required before production doctrine | Distinct from communication/token saving; method useful, plugin installation rejected |
+| agent-minimalism | 3 | github-dietrichgebert-ponytail; EXP-0002 | Can agents reduce code/dependency/abstraction bloat without cutting safety or checks? | Candidate adapted ladder validated for EGX_Ingestion; production still needs a production-style task | Distinct from communication/token saving; plugin installation rejected |
 
 ## Candidate themes
 

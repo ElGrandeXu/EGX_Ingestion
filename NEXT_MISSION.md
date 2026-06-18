@@ -2,59 +2,45 @@
 
 ## Recommended next mission
 
-Run the proposed `agent-minimalism` experiment or ingest the next single source.
+Ingest the next single source, or run one production-style implementation experiment using `minimal-implementation-ladder`.
 
-The user can provide a single URL or a list of URLs. Codex must process the first unprocessed source completely before moving to the next.
+## Decision question
 
-Alternative experiment mission: choose one bounded implementation task and compare normal Codex behavior against an adapted minimal implementation ladder derived from Ponytail, measuring files changed, dependencies added, validation retained and checks retained.
+For a new source: what should be kept, adapted, tested, watched or rejected?
 
-Use final-only communication. Do not send checkpoints. Write all detailed synthesis into workspace files.
+For the next experiment: does the active ladder improve a real implementation task without cutting evidence, tests or safety?
 
-## Prompt format for user
+## Evidence needed
 
-```md
-Mission: ingest these GitHub sources one by one.
+- For source ingestion: one URL, source note, verdict, scores, theme updates and transversal registers.
+- For implementation experiment: task, baseline expectation, patch, avoided complexity and verification.
 
-- URL: https://github.com/owner/repo
-  Assumed name:
-  Why it matters:
-  Priority: high / medium / low
-  Decision question:
-```
+## Allowed changes
 
-A plain list also works:
+- Existing source, theme, register, handoff and template files.
+- New source note only for a new source.
+- New experiment note only for a real experiment.
 
-```md
-https://github.com/owner/repo-a
-https://github.com/owner/repo-b
-```
+## Avoid
 
-## Procedure for Codex
+- Batch ingestion.
+- Ticket system.
+- New workflow folder.
+- Script or dependency unless repeated manual work proves automation value.
+- Plugin install or global configuration change.
 
-1. Read `AGENTS.md`, `COMMUNICATION_PROTOCOL.md`, `CURRENT_STATE.md`, `INGESTION_PROTOCOL.md`, `SOURCE_INDEX.md`, `THEME_MAP.md`, `DECISIONS.md`, `PRODUCTION_CANDIDATES.md`, `RISK_REGISTER.md` and relevant skills in `.codex/skills/`.
-2. Select the first unprocessed source only.
-3. Read the primary source and capture evidence.
-4. Decide whether clone/test is necessary.
-5. If clone/test is necessary, use `repos/cloned/`, inspect scripts first and log commands.
-6. Produce one decision-oriented source note in `sources/`.
-7. Score the source and assign `KEEP`, `ADAPT`, `TEST`, `WATCH` or `REJECT`.
-8. Create or update the relevant theme.
-9. Update all transversal registries.
-10. Update `CURRENT_STATE.md`, `NEXT_MISSION.md` and `HANDOFF.md` if state changes.
-11. Run `.\scripts\check_workspace.ps1`.
-12. Respond only with the compressed ingestion final format.
+## Done when
 
-## Non-negotiable rule
-
-Do not summarize a batch of repositories. Each repository must produce its own note, verdict, scoring, theme impact and registry updates.
+- One source or one experiment is complete.
+- `SOURCE_INDEX.md` or `EXPERIMENT_LOG.md` is updated as applicable.
+- `THEME_MAP.md`, `DECISIONS.md`, `CURRENT_STATE.md`, `HANDOFF.md` and this file reflect the next action.
+- `.\scripts\check_workspace.ps1` passes.
 
 ## Current blockers
 
 - None.
 
-## Last completed source
+## Last completed work
 
-- `github-dietrichgebert-ponytail`
-- Verdict: ADAPT
-- Theme: `agent-minimalism`
-- Clone retained locally under ignored path `repos/cloned/ponytail`
+- `EXP-0002`: minimal implementation ladder tested and promoted to active EGX_Ingestion rule.
+- Previous source: `github-dietrichgebert-ponytail`, verdict `ADAPT`, theme `agent-minimalism`.

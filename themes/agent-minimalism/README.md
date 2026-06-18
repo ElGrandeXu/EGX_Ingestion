@@ -25,4 +25,4 @@ How should future agent-driven implementation work avoid unnecessary code, depen
 - `experiments.md`: tests run or proposed.
 - `production_implications.md`: implications for future `EGX_Production`.
 - `cross_links.md`: links to related or competing themes.
-
+- `minimal-implementation-ladder.md`: active EGX_Ingestion ladder adapted from Ponytail.

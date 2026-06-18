@@ -70,13 +70,14 @@ Compatibility mirrors remain under `.agents/skills/`.
 
 ## Current theme state
 
-- Active theme: `agent-minimalism`, maturity 2.
-- Production candidate: `PC-0001` adapted minimal implementation ladder, status `test-required`.
-- Experiments: `EXP-0001` done; `EXP-0002` proposed.
+- Active theme: `agent-minimalism`, maturity 3.
+- Production candidate: `PC-0001` adapted minimal implementation ladder, status `candidate`.
+- Experiments: `EXP-0001` done; `EXP-0002` done.
+- Active EGX_Ingestion rule: `themes/agent-minimalism/minimal-implementation-ladder.md`.
 
 ## Next action
 
-Either run `EXP-0002` or wait for the next single source URL. Do not clone unless the source note justifies local inspection, and clone only into `repos/cloned/`. Final user reply must be compressed.
+Wait for the next single source URL or a production-style implementation experiment. Apply `minimal-implementation-ladder` before adding new files, scripts, folders, dependencies or abstractions. Do not clone unless the source note justifies local inspection, and clone only into `repos/cloned/`. Final user reply must be compressed.
 
 ## Verification
 

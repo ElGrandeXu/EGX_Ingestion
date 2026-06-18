@@ -16,6 +16,7 @@
 - Track intentional shortcuts with a ceiling and an upgrade trigger.
 - Use review/audit mode before any always-on instruction mode.
 - Apply the ladder to future production implementation tasks, not to ingestion notes.
+- For EGX_Ingestion, apply `minimal-implementation-ladder.md` before adding scripts, folders, dependencies, new registers or production candidates.
 
 ## Test
 
@@ -29,4 +30,3 @@
 - Always-on hook injection before a local test proves value.
 - Treating line count as success when validation, security or accessibility are removed.
 - Copying multi-agent adapter trees into `EGX_Ingestion`.
-

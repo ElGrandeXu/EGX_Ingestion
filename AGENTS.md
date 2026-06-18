@@ -172,6 +172,10 @@ A source is done only when:
 - No automatic promotion to `EGX_Production` without justification, score and next test.
 - No source batching that hides per-source decisions.
 
+## Minimal implementation ladder
+
+Before adding files, scripts, folders, dependencies, abstractions or production candidates, apply `themes/agent-minimalism/minimal-implementation-ladder.md`: reuse existing doctrine/templates first, prefer the smallest reversible Markdown patch when automation is not needed, and keep tests, experiments, risk tracking and register synchronization intact.
+
 ## End-of-mission response
 
 End each mission with the shortest format allowed by `COMMUNICATION_PROTOCOL.md`.

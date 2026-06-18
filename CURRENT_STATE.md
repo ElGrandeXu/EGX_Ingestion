@@ -32,13 +32,14 @@ Git has been initialized locally on branch `main`. GitHub publication is complet
 - Transversal synthesis is mandatory after every source, including rejected sources.
 - `EGX_Production` remains uncreated and untouched.
 - Final-only communication is mandatory by default; synthesis goes into files, not chat narration.
+- `minimal-implementation-ladder` is an active EGX_Ingestion rule for avoiding unnecessary files, scripts, dependencies, abstractions and framework layers while preserving experiments, tests, documentation and registers.
 
 ## Current content status
 
 - Sources ingested: 1 (`github-dietrichgebert-ponytail`).
 - Active themes: `agent-minimalism`.
-- Production candidates: `PC-0001` adapted minimal implementation ladder, status `test-required`.
-- Experiments launched: `EXP-0001` done; `EXP-0002` proposed.
+- Production candidates: `PC-0001` adapted minimal implementation ladder, status `candidate`.
+- Experiments launched: `EXP-0001` done; `EXP-0002` done.
 - Known workspace risks: ingestion/production confusion, skill mirror divergence, communication compression, plugin sprawl, minimalism/neglect confusion, always-on rule cost and benchmark hype.
 - Git local repository: initialized on `main`.
 - GitHub remote: `origin` -> `https://github.com/ElGrandeXu/EGX_Ingestion.git`.
@@ -56,4 +57,4 @@ Git has been initialized locally on branch `main`. GitHub publication is complet
 
 ## Next step
 
-Either ingest the next single source or run `EXP-0002`, a bounded comparison of normal implementation vs adapted minimalism checklist before promoting `PC-0001`.
+Ingest the next single source, or test `minimal-implementation-ladder` on one production-style implementation task before any `EGX_Production` migration.
