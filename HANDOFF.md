@@ -16,14 +16,17 @@ Ingested source:
 
 Git has been initialized locally on branch `main`. The workspace has Git publication safeguards in `.gitignore`, `.gitattributes`, `SECURITY.md` and `GIT_PUBLISH_AUDIT.md`.
 
-GitHub publication is complete. The private repository is `ElGrandeXu/EGX_Ingestion` at `https://github.com/ElGrandeXu/EGX_Ingestion`.
+GitHub publication is complete. The public repository is `ElGrandeXu/EGX_Ingestion` at `https://github.com/ElGrandeXu/EGX_Ingestion`.
+
+Operational workspace user name: `Xü`; see `USER_CONTEXT.md`. Keep GitHub owner as `ElGrandeXu` unless explicitly changed.
 
 Previous published commit before Ponytail ingestion:
 
 - Message: `Initial EGX_Ingestion workspace`
 - Commit: `d074df0`
 - Remote: `origin` -> `https://github.com/ElGrandeXu/EGX_Ingestion.git`.
-- GitHub visibility: `PRIVATE`.
+- GitHub visibility before public release: `PRIVATE`.
+- Current GitHub visibility: `PUBLIC`.
 
 GitHub CLI note:
 

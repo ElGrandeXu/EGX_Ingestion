@@ -206,3 +206,14 @@ Reason: the workspace is a research and decision log that may later include note
   - `repos/archived/.gitkeep`
   - `experiments/runs/.gitkeep`
 - Next action: commit and push this publication documentation, then begin the first source-by-source GitHub ingestion from a user-provided source.
+
+## Public Visibility Update
+
+Date: 2026-06-18
+
+- Repository: `ElGrandeXu/EGX_Ingestion`
+- Visibility before: `PRIVATE`
+- Tracked-file secret audit before public release: clean for real secrets; matches were policy/audit/ignore-rule references only.
+- Command: `gh repo edit ElGrandeXu/EGX_Ingestion --visibility public --accept-visibility-change-consequences`
+- Visibility after: `PUBLIC`
+- Detailed audit: `PUBLICATION_AUDIT.md`

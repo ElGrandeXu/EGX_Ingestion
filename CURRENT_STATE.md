@@ -8,7 +8,9 @@ Workspace consolidated from initial scaffolding into a usable Codex-native inges
 
 An external repository was cloned inside the allowed ignored path: `repos/cloned/ponytail`. No dependency was installed.
 
-Git has been initialized locally on branch `main`. GitHub publication is complete: the private GitHub repository `ElGrandeXu/EGX_Ingestion` exists and `origin/main` tracks it.
+Git has been initialized locally on branch `main`. GitHub publication is complete: the public GitHub repository `ElGrandeXu/EGX_Ingestion` exists and `origin/main` tracks it.
+
+Operational workspace user name is `Xü`; this is documented in `USER_CONTEXT.md` and does not change GitHub owner, Git identity, repository name or local system path.
 
 ## Consolidation completed
 
@@ -43,7 +45,7 @@ Git has been initialized locally on branch `main`. GitHub publication is complet
 - Known workspace risks: ingestion/production confusion, skill mirror divergence, communication compression, plugin sprawl, minimalism/neglect confusion, always-on rule cost and benchmark hype.
 - Git local repository: initialized on `main`.
 - GitHub remote: `origin` -> `https://github.com/ElGrandeXu/EGX_Ingestion.git`.
-- GitHub visibility: `PRIVATE`.
+- GitHub visibility: `PUBLIC`.
 - Active Git protections: `.gitignore`, `.gitattributes`, `SECURITY.md` and `GIT_PUBLISH_AUDIT.md`.
 
 ## Git publication status

@@ -4,6 +4,8 @@
 
 This workspace is `EGX_Ingestion`.
 
+Operational user name for this workspace: `Xü`; see `USER_CONTEXT.md`.
+
 Purpose: research, ingest, test and transform technical or methodological sources into decision-ready knowledge. Future sources can include GitHub repositories, Reddit discussions, Hugging Face pages, official documentation, technical articles, architectures, agentic workflows, AI tools and development patterns.
 
 This is not the production workspace. The future production workspace is `C:\Users\maxer\Desktop\EGX_Production`, and must not be created or modified from here without a later explicit mission.

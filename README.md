@@ -4,6 +4,8 @@
 
 It turns technical and methodological sources into knowledge that can later inform `EGX_Production`. It is not the production workspace.
 
+Operational user context for this workspace is documented in `USER_CONTEXT.md`; use `Xü` as the workspace user name.
+
 This workspace is not:
 
 - a production codebase;
