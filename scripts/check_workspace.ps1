@@ -12,7 +12,9 @@ $requiredFiles = @(
     "CURRENT_STATE.md",
     "NEXT_MISSION.md",
     "HANDOFF.md",
+    "LICENSE",
     ".gitignore",
+    ".github\workflows\validate-workspace.yml",
     "doctrine\CORE.md",
     "doctrine\MEMORY_HIERARCHY.md",
     "doctrine\INGESTION.md",
@@ -34,7 +36,8 @@ $allowedRootFiles = @(
     "RUNBOOK.md",
     "CURRENT_STATE.md",
     "NEXT_MISSION.md",
-    "HANDOFF.md"
+    "HANDOFF.md",
+    "LICENSE"
 )
 
 $forbiddenPaths = @(

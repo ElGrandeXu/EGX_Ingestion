@@ -1,0 +1,26 @@
+name: Validate Workspace
+run-name: Validate EGX_Ingestion workspace
+
+# Validates the minimal agent-first workspace contract.
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Run workspace validation
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate minimal workspace
+        shell: pwsh
+        run: .\scripts\check_workspace.ps1
