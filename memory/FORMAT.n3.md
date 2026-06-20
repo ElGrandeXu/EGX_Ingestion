@@ -25,3 +25,22 @@ Rules:
 - A card is not literary summary.
 - A card points to N2 and N1 when they exist.
 - Long detail belongs in N2 or N1.
+
+Default export: `memory/exports/<source-id>-N3.md`.
+
+Frontmatter fields:
+
+```yaml
+title:
+source:
+ingestion_date:
+verdict:
+confidence:
+tags:
+next_action:
+model_used:
+tokens:
+density_score:
+```
+
+After frontmatter, write the same compact N3 card fields.

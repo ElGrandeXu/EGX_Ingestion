@@ -2,8 +2,15 @@ $ErrorActionPreference = "Stop"
 
 $root = Resolve-Path (Join-Path $PSScriptRoot "..")
 
-$files = Get-ChildItem -LiteralPath $root -Recurse -File -Force | Where-Object { $_.FullName -notmatch '\\.git(\\|$)' }
-$dirs = Get-ChildItem -LiteralPath $root -Recurse -Directory -Force | Where-Object { $_.FullName -notmatch '\\.git(\\|$)' }
+function Test-GeneratedPath([string]$fullPath) {
+    ($fullPath -match '\\.git(\\|$)') -or
+    ($fullPath -match '\\__pycache__(\\|$)') -or
+    ($fullPath -match '\\logs\\ingest-.*\.json$') -or
+    ($fullPath -match '\\memory\\exports\\lancedb(\\|$)')
+}
+
+$files = Get-ChildItem -LiteralPath $root -Recurse -File -Force | Where-Object { -not (Test-GeneratedPath $_.FullName) }
+$dirs = Get-ChildItem -LiteralPath $root -Recurse -Directory -Force | Where-Object { -not (Test-GeneratedPath $_.FullName) }
 
 $requiredFiles = @(
     "AGENTS.md",
@@ -14,12 +21,25 @@ $requiredFiles = @(
     "HANDOFF.md",
     "LICENSE",
     ".gitignore",
+    ".egxrc",
+    ".env.example",
+    "pyproject.toml",
     ".github\workflows\validate-workspace.yml",
+    "egx\__init__.py",
+    "egx\main.py",
+    "egx\ingest.py",
+    "egx\logs.py",
+    "egx\review.py",
+    "egx\exporter.py",
+    "egx\check.py",
+    "egx\config.py",
     "doctrine\CORE.md",
     "doctrine\MEMORY_HIERARCHY.md",
     "doctrine\INGESTION.md",
     "memory\INDEX.n3",
     "memory\FORMAT.n3.md",
+    "memory\exports\.gitkeep",
+    "logs\.gitkeep",
     "templates\source.n1.md",
     "templates\note.n2.md",
     "templates\card.n3.md",
@@ -37,7 +57,10 @@ $allowedRootFiles = @(
     "CURRENT_STATE.md",
     "NEXT_MISSION.md",
     "HANDOFF.md",
-    "LICENSE"
+    "LICENSE",
+    ".egxrc",
+    ".env.example",
+    "pyproject.toml"
 )
 
 $forbiddenPaths = @(
@@ -49,8 +72,7 @@ $forbiddenPaths = @(
     "experiments",
     (Join-Path "repos" "cloned"),
     (Join-Path "repos" "archived"),
-    "themes",
-    "logs"
+    "themes"
 )
 
 $badNameTerms = @("k" + "ey", "se" + "cret", "to" + "ken", "cl" + [char]0x00E9)
@@ -124,11 +146,6 @@ if ($unexpectedRepoFiles.Count -gt 0) {
     $failures.Add("Unexpected retained repo evidence")
 }
 
-$unexpectedSourceFiles = Get-ChildItem -LiteralPath (Join-WorkspacePath "sources") -Force -File -ErrorAction SilentlyContinue | Where-Object { $_.Name -ne ".gitkeep" }
-if ($unexpectedSourceFiles.Count -gt 0) {
-    $failures.Add("Unexpected retained source notes")
-}
-
 foreach ($file in $files) {
     foreach ($term in $badNameTerms) {
         if ($file.Name.IndexOf($term, [System.StringComparison]::OrdinalIgnoreCase) -ge 0) {
@@ -142,6 +159,11 @@ foreach ($needle in @("CAVEMAN", "Token Saving", "Agent-First", "Minimalism")) {
     if ($requiredDoctrine -notmatch [regex]::Escape($needle)) {
         $failures.Add("CORE.md missing doctrine: $needle")
     }
+}
+
+$cliMainLines = (Get-Content -LiteralPath (Join-WorkspacePath "egx\main.py")).Count
+if ($cliMainLines -gt 200) {
+    $failures.Add("CLI core too large: egx\main.py has $cliMainLines lines")
 }
 
 $requiredMemory = Get-Content -LiteralPath (Join-WorkspacePath "doctrine\MEMORY_HIERARCHY.md") -Raw

@@ -17,6 +17,7 @@ Done when:
 - N1 proof identified.
 - N2 source note created in `sources/`.
 - N3 source card created at `memory/<source-id>.n3` from `templates/card.n3.md`.
+- N3 export created at `memory/exports/<source-id>-N3.md`.
 - Verdict, scores, risks and production impact are clear.
 - `memory/INDEX.n3`, affected N3 cards, `CURRENT_STATE.md` and `HANDOFF.md` are synchronized.
 - `.\scripts\check_workspace.ps1` passes.

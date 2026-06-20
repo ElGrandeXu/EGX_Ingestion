@@ -1,0 +1,5 @@
+provider: openai
+model: default
+mode: caveman
+workspace_check: scripts/check_workspace.ps1
+export_format: md

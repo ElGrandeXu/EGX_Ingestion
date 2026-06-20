@@ -19,9 +19,12 @@ Current content:
 
 - retained source notes: none;
 - retained source cards: none;
+- N3 exports path: `memory/exports/`;
+- export formats: `md`, `json`, `yaml`, `mcp`;
+- optional vector store: LanceDB via `egx export <source> --vector`;
 - retained clones: none;
 - active skills: `.codex/skills/`.
 
-Next action: ingest exactly one new source.
+Next action: ingest exactly one new source with `egx ingest <source> --export md`.
 
 After structural edits run `.\scripts\check_workspace.ps1`.

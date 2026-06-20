@@ -9,3 +9,6 @@ N2=doctrine/CORE.md,doctrine/MEMORY_HIERARCHY.md,doctrine/INGESTION.md
 N1=none
 NEXT=add-card-at-memory/<source-id>.n3
 WHY=clean-public-template-entrypoint
+EXPORT=memory/exports/<source-id>-N3.md
+LOGS=logs/ingest-*.json
+SELF_REVIEW=memory/self-review-*.n3

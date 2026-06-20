@@ -18,12 +18,14 @@ venv/
 .venv/
 __pycache__/
 *.pyc
+*.egg-info/
 
 # builds / outputs
 dist/
 build/
 out/
 outputs/
+memory/exports/lancedb/
 coverage/
 .cache/
 .tmp/
@@ -39,5 +41,6 @@ Thumbs.db
 # local evidence and noisy runs
 repos/*
 !repos/.gitkeep
-logs/
+logs/*
+!logs/.gitkeep
 *.log
