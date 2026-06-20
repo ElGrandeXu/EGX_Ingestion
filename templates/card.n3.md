@@ -1,0 +1,11 @@
+ID=<stable-id>
+TYPE=<source|theme|decision|risk|candidate|mission>
+V=<KEEP|ADAPT|REJECT|WATCH|ACTIVE|BLOCKED>
+TH=<theme-or-none>
+RISK=<LOW|MED|HIGH>
+PROD=<YES|NO|MAYBE>
+CONF=<LOW|MED|HIGH>
+N2=<path-or-none>
+N1=<path-or-none>
+NEXT=<short-action>
+WHY=<short-reason>

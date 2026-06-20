@@ -1,46 +1,22 @@
 # NEXT_MISSION
 
-## Recommended next mission
+Mission: ingest one new technical or methodological source.
 
-Ingest the next single source, or run one production-style implementation experiment using `minimal-implementation-ladder`.
+Constraints:
 
-## Decision question
+- Start from `memory/INDEX.n3`.
+- Process one source only.
+- Clone only if local inspection can change the verdict.
+- Put temporary repo evidence under `repos/<source-id>/`.
+- Delete clones after synthesis unless explicitly retained.
+- Do not modify production workspaces.
+- Apply agent-minimalism before adding structure.
 
-For a new source: what should be kept, adapted, tested, watched or rejected?
+Done when:
 
-For the next experiment: does the active ladder improve a real implementation task without cutting evidence, tests or safety?
-
-## Evidence needed
-
-- For source ingestion: one URL, source note, verdict, scores, theme updates and transversal registers.
-- For implementation experiment: task, baseline expectation, patch, avoided complexity and verification.
-
-## Allowed changes
-
-- Existing source, theme, register, handoff and template files.
-- New source note only for a new source.
-- New experiment note only for a real experiment.
-
-## Avoid
-
-- Batch ingestion.
-- Ticket system.
-- New workflow folder.
-- Script or dependency unless repeated manual work proves automation value.
-- Plugin install or global configuration change.
-
-## Done when
-
-- One source or one experiment is complete.
-- `SOURCE_INDEX.md` or `EXPERIMENT_LOG.md` is updated as applicable.
-- `THEME_MAP.md`, `DECISIONS.md`, `CURRENT_STATE.md`, `HANDOFF.md` and this file reflect the next action.
+- N1 proof identified.
+- N2 source note created in `sources/`.
+- N3 source card created at `memory/<source-id>.n3` from `templates/card.n3.md`.
+- Verdict, scores, risks and production impact are clear.
+- `memory/INDEX.n3`, affected N3 cards, `CURRENT_STATE.md` and `HANDOFF.md` are synchronized.
 - `.\scripts\check_workspace.ps1` passes.
-
-## Current blockers
-
-- None.
-
-## Last completed work
-
-- `EXP-0002`: minimal implementation ladder tested and promoted to active EGX_Ingestion rule.
-- Previous source: `github-dietrichgebert-ponytail`, verdict `ADAPT`, theme `agent-minimalism`.

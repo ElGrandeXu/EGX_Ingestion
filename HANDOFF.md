@@ -1,93 +1,27 @@
 # HANDOFF
 
-## Current state
+Start at `memory/INDEX.n3`.
 
-`EGX_Ingestion` has been consolidated, published and updated with a final-only token-saving communication doctrine. The first real source ingestion is complete.
+`EGX_Ingestion` is a clean public agent-first ingestion base.
 
-Ingested source:
+Preserved doctrine:
 
-- ID: `github-dietrichgebert-ponytail`
-- URL: https://github.com/DietrichGebert/ponytail
-- Verdict: ADAPT
-- Primary theme: `agent-minimalism`
-- Source note: `sources/github-dietrichgebert-ponytail.md`
-- Clone retained locally: `repos/cloned/ponytail` (ignored by git)
-- Dependencies installed: none
+- CAVEMAN final-only;
+- token saving;
+- Memory Hierarchy Architecture;
+- `N3 -> N2 -> N1`;
+- one-source ingestion;
+- source -> synthesis -> decision;
+- agent minimalism;
+- ingestion/production separation.
 
-Git has been initialized locally on branch `main`. The workspace has Git publication safeguards in `.gitignore`, `.gitattributes`, `SECURITY.md` and `GIT_PUBLISH_AUDIT.md`.
+Current content:
 
-GitHub publication is complete. The public repository is `ElGrandeXu/EGX_Ingestion` at `https://github.com/ElGrandeXu/EGX_Ingestion`.
+- retained source notes: none;
+- retained source cards: none;
+- retained clones: none;
+- active skills: `.codex/skills/`.
 
-Operational workspace user name: `Xü`; see `USER_CONTEXT.md`. Keep GitHub owner as `ElGrandeXu` unless explicitly changed.
+Next action: ingest exactly one new source.
 
-Previous published commit before Ponytail ingestion:
-
-- Message: `Initial EGX_Ingestion workspace`
-- Commit: `d074df0`
-- Remote: `origin` -> `https://github.com/ElGrandeXu/EGX_Ingestion.git`.
-- GitHub visibility before public release: `PRIVATE`.
-- Current GitHub visibility: `PUBLIC`.
-
-GitHub CLI note:
-
-- Installed executable: `C:\Program Files\GitHub CLI\gh.exe`.
-- The short `gh` command was not available in the current PowerShell `PATH` during publication.
-- GitHub authentication succeeded for `ElGrandeXu` with HTTPS.
-
-## Files to read first
-
-1. `AGENTS.md`
-2. `CURRENT_STATE.md`
-3. `COMMUNICATION_PROTOCOL.md`
-4. `NEXT_MISSION.md`
-5. `INGESTION_PROTOCOL.md`
-6. `SOURCE_INDEX.md`
-7. `THEME_MAP.md`
-8. `DECISIONS.md`
-9. `PRODUCTION_CANDIDATES.md`
-10. `RISK_REGISTER.md`
-11. `.codex/skills/README.md`
-12. `GIT_PUBLISH_AUDIT.md`
-
-## Essential rules
-
-- Stay inside `C:\Users\maxer\Desktop\EGX_Ingestion`.
-- Treat sources one by one.
-- Produce decision-oriented source notes.
-- Score every ingested source.
-- Document clone/test decisions.
-- Update transversal registries after every source.
-- Do not create `EGX_Production`.
-- Do not commit future contents of `repos/cloned/`, `repos/archived/` or `experiments/runs/` except their `.gitkeep` files.
-- Keep `logs/*.md` versioned as controlled memory, but do not commit raw `*.log` files.
-- Use final-only communication by default. No progress narration.
-
-## Active skills
-
-- `.codex/skills/caveman-final-only`
-- `.codex/skills/source-ingestion`
-- `.codex/skills/repo-lab-test`
-- `.codex/skills/transversal-synthesis`
-
-Compatibility mirrors remain under `.agents/skills/`.
-
-## Current theme state
-
-- Active theme: `agent-minimalism`, maturity 3.
-- Production candidate: `PC-0001` adapted minimal implementation ladder, status `candidate`.
-- Experiments: `EXP-0001` done; `EXP-0002` done.
-- Active EGX_Ingestion rule: `themes/agent-minimalism/minimal-implementation-ladder.md`.
-
-## Next action
-
-Wait for the next single source URL or a production-style implementation experiment. Apply `minimal-implementation-ladder` before adding new files, scripts, folders, dependencies or abstractions. Do not clone unless the source note justifies local inspection, and clone only into `repos/cloned/`. Final user reply must be compressed.
-
-## Verification
-
-Run:
-
-```powershell
-.\scripts\check_workspace.ps1
-```
-
-Expected result after consolidation: `Status: OK`.
+After structural edits run `.\scripts\check_workspace.ps1`.

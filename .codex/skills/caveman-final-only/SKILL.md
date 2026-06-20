@@ -16,7 +16,7 @@ Use professional compression, not roleplay.
 - Do not announce this mode.
 - Do not say "I will" before work.
 - Speak only at final unless a real blocker appears.
-- If blocked, use the blocker format from `COMMUNICATION_PROTOCOL.md`.
+- If blocked, use `status: blocked`, `blocker:`, `needed:`, `done:`.
 - Keep final reports compressed.
 - Preserve exact commands, paths, file names, hashes and error strings when useful.
 - Do not use caricature caveman phrasing.

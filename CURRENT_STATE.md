@@ -1,62 +1,29 @@
 # CURRENT_STATE
 
-Date: 2026-06-18
+Date: 2026-06-20
 
-## Workspace state
+State: clean public agent-first ingestion template.
 
-Workspace consolidated from initial scaffolding into a usable Codex-native ingestion workspace. A final-only token-saving communication doctrine is installed. The first real source ingestion is complete: `github-dietrichgebert-ponytail`.
+## Active Surfaces
 
-An external repository was cloned inside the allowed ignored path: `repos/cloned/ponytail`. No dependency was installed.
+- Instructions: `AGENTS.md`
+- Runbook: `RUNBOOK.md`
+- Doctrine: `doctrine/`
+- First read: `memory/INDEX.n3`
+- N3 format: `memory/FORMAT.n3.md`
+- Skills: `.codex/skills/`
+- Templates: `templates/`
+- Future N2 source notes: `sources/`
+- Temporary N1 repo evidence: `repos/`
 
-Git has been initialized locally on branch `main`. GitHub publication is complete: the public GitHub repository `ElGrandeXu/EGX_Ingestion` exists and `origin/main` tracks it.
+## State
 
-Operational workspace user name is `Xü`; this is documented in `USER_CONTEXT.md` and does not change GitHub owner, Git identity, repository name or local system path.
+- CAVEMAN, token saving, MHA, `N3 -> N2 -> N1`, one-source ingestion and agent minimalism preserved.
+- Historical source notes, experiments, audits and clone artifacts removed.
+- Retained local clones: none.
+- Active source notes: none.
+- Active production candidates: none.
 
-## Consolidation completed
+## Next
 
-- `AGENTS.md` now defines source-by-source ingestion, source-type handling, done criteria and strict scope.
-- `.codex/skills/` is the primary Codex repo-scoped skill location.
-- `.agents/skills/` is retained as compatibility mirror.
-- `skills/` is a documentary mirror and registry.
-- `COMMUNICATION_PROTOCOL.md` and `TOKEN_SAVING_DOCTRINE.md` define final-only communication.
-- Templates now force metadata, verdicts, scores, clone/test decision, production impact, risks and next actions.
-- Root registries now include status, evidence and verification fields.
-- `INGESTION_PROTOCOL.md` and `RUNBOOK.md` now describe GitHub ingestion and handoff more explicitly.
-- `scripts/check_workspace.ps1` is expected to verify non-empty files, templates and skill frontmatter.
-
-## Doctrine active
-
-- One source at a time.
-- Decision notes, not neutral summaries.
-- Practical value beats novelty.
-- Themes emerge progressively.
-- Scoring is mandatory for every ingested source.
-- Transversal synthesis is mandatory after every source, including rejected sources.
-- `EGX_Production` remains uncreated and untouched.
-- Final-only communication is mandatory by default; synthesis goes into files, not chat narration.
-- `minimal-implementation-ladder` is an active EGX_Ingestion rule for avoiding unnecessary files, scripts, dependencies, abstractions and framework layers while preserving experiments, tests, documentation and registers.
-
-## Current content status
-
-- Sources ingested: 1 (`github-dietrichgebert-ponytail`).
-- Active themes: `agent-minimalism`.
-- Production candidates: `PC-0001` adapted minimal implementation ladder, status `candidate`.
-- Experiments launched: `EXP-0001` done; `EXP-0002` done.
-- Known workspace risks: ingestion/production confusion, skill mirror divergence, communication compression, plugin sprawl, minimalism/neglect confusion, always-on rule cost and benchmark hype.
-- Git local repository: initialized on `main`.
-- GitHub remote: `origin` -> `https://github.com/ElGrandeXu/EGX_Ingestion.git`.
-- GitHub visibility: `PUBLIC`.
-- Active Git protections: `.gitignore`, `.gitattributes`, `SECURITY.md` and `GIT_PUBLISH_AUDIT.md`.
-
-## Git publication status
-
-- `git`: installed.
-- `gh`: installed at `C:\Program Files\GitHub CLI\gh.exe`; the short `gh` command is not available in the current PowerShell `PATH`.
-- GitHub authentication: successful for `ElGrandeXu` using HTTPS.
-- GitHub repository: `https://github.com/ElGrandeXu/EGX_Ingestion`.
-- Local initial commit pushed: `d074df0 Initial EGX_Ingestion workspace`.
-- Documentation update pending or completed in a follow-up commit named `Document GitHub publication`.
-
-## Next step
-
-Ingest the next single source, or test `minimal-implementation-ladder` on one production-style implementation task before any `EGX_Production` migration.
+Ingest one new source from a clean base.

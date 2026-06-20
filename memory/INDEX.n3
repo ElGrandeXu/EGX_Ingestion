@@ -1,0 +1,11 @@
+ID=egx-ingestion-index
+TYPE=mission
+V=ACTIVE
+TH=none
+RISK=LOW
+PROD=NO
+CONF=HIGH
+N2=doctrine/CORE.md,doctrine/MEMORY_HIERARCHY.md,doctrine/INGESTION.md
+N1=none
+NEXT=add-card-at-memory/<source-id>.n3
+WHY=clean-public-template-entrypoint
